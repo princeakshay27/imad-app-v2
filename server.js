@@ -7,13 +7,13 @@ app.use(morgan('combined'));
 
 
 app.get('/articleone', function (req, res) {
-  res.sendFile('article one is requested and will be served');
+  res.send('article one is requested and will be served');
 });
 app.get('/articletwo', function (req, res) {
-  res.sendFile('article two is requested and will be served');
+  res.send('article two is requested and will be served');
 });
 app.get('/articlethree', function (req, res) {
-  res.sendFile('article three is requested and will be served');
+  res.send('article three is requested and will be served');
 });
 
 app.get('/', function (req, res) {
