@@ -3,8 +3,8 @@ console.log('Loaded!');
 var element= document.getElementById('main-text');
 element.innerHTML='new value';
 //to move the image
-var img = documentgetElementById('img');
-img.onclick=function()
+var img = documentgetElementById('akshaypic');
+akshaypic.onclick=function()
 {
     img.style.marginleft='100px';
 };
