@@ -52,7 +52,7 @@ var htmltemplate=
     </body>
 </html>
 ` ;
-return Template;
+return template;
 }
 
 
