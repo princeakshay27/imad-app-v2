@@ -14,6 +14,13 @@ var content={
                   `
 };
 
+var htmltemplate= 
+`
+
+
+
+` ;
+
 
 app.get('/articleone', function (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
