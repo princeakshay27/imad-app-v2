@@ -17,10 +17,11 @@ var content={
 
 function createTemplate (data) 
 {
-    var date=data.date;
+   
     var title=data.title;
+    var date=data.date;
     var heading=data.heading;
-    var content=data.heading;
+    var content=data.content;
 var htmltemplate= 
 `<html>
     <head>
