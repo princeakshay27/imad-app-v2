@@ -5,11 +5,14 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var content={
-    title:'article one hi I am akshay'
-    heading:'article one'
-    date:'feb 10th 2016'
-    content:''
-}
+    title:'article one hi I am akshay' ,
+    heading: 'article one' ,
+    date:'feb 10th 2016' ,
+    content: `  
+    <p>ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..
+                  ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda...</p>
+                  `
+};
 
 
 app.get('/articleone', function (req, res) {
