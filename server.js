@@ -15,7 +15,8 @@ var content={
 };
 
 
-function createTemplate (data){
+function createTemplate (data) 
+{
     var date=data.date;
     var title=data.title;
     var heading=data.heading;
@@ -49,7 +50,7 @@ var htmltemplate=
     </body>
 </html>
 ` ;
-return htmlTemplate;
+return htmlcreateTemplate;
 }
 
 
