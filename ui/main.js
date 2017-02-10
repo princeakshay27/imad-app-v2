@@ -7,12 +7,11 @@ var img = document.getElementById('pic');
 var marginLeft=0;
 function moveRight()
 {
-    marginLeft=marginLeft+10;
+    marginLeft=marginLeft+1;
     img.style.marginLeft=marginLeft+'px';//concanating px with 10
     
 }
 img.onclick=function()
 {
-    var interval=setInterval(moveRight,100);
-    img.style.marginLeft='100px';
+    var interval=setInterval(moveRight,50);
 };
