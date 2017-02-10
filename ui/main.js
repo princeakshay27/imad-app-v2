@@ -3,7 +3,7 @@ console.log('Loaded!');
 var element= document.getElementById('main-text');
 element.innerHTML='new value';
 //to move the image
-var img = document.getElementById('akshaypic');
+var img = document.getElementById('pic');
 img.onclick=function()
 {
     img.style.marginleft='100px';
