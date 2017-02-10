@@ -4,9 +4,10 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articles={
-'articleone' :
+var articles=
 {
+ 'articleone' :
+ {
     title:'article one hi I am akshay' ,
     heading:'articleone' ,
     date:'feb 10th 2017' ,
@@ -14,21 +15,29 @@ var articles={
     <p>ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..
                   ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda...</p>
                   `
-},
-'articletwo':{ title:'article two hi I am akshay' ,
+ },
+ 'articletwo':
+ { 
+    title:'article two hi I am akshay' ,
     heading:'articletwo' ,
     date:'feb 10th 2017' ,
     content: `  
     <p>ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..
                   ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda...</p>
-                  `},
-'articlethree':{ title:'article three hi I am akshay' ,
+                  `
+    
+ },
+ 'articlethree':
+ { 
+    title:'article three hi I am akshay' ,
     heading:'articlethree' ,
     date:'feb 10th 2017' ,
     content: `  
     <p>ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..
                   ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda...</p>
-                  `}
+                  `
+    
+ }
 };
 
 function createTemplate(data) 
