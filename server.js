@@ -14,16 +14,47 @@ var content={
                   `
 };
 
+
+function createTemplate (data){
+    var date=data.date;
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.heading;
 var htmltemplate= 
-`
-
-
-
+`<html>
+    <head>
+    <title>${title}
+    </title>
+    <meta name="view port" content="width-device-width,initial-scale-1">
+    <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+ <div class="container">
+            <div>
+             <div>
+        <a href="/">home</a>
+         </div>
+            <hr/>
+        <h3>${heading}</h3>
+    <div>
+        ${date}
+    </div>
+    <div>
+       ${content}
+    </div>
+        </div>
+ </div>
+       
+    </body>
+</html>
 ` ;
+return htmlTemplate;
+}
 
 
 app.get('/articleone', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
+   res.send(createTemplate(articleone));
 });
 app.get('/articletwo', function (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'articletwo.html'));
