@@ -4,6 +4,12 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var content={
+    title:'article one hi I am akshay'
+    heading:'article one'
+    date:'feb 10th 2016'
+    content:''
+}
 
 
 app.get('/articleone', function (req, res) {
