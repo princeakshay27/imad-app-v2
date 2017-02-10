@@ -63,7 +63,6 @@ function createTemplate(data)
     </div>
         </div>
  </div>
-       
     </body>
 </html>
 `
