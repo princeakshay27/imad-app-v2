@@ -4,7 +4,8 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articleone=
+var articles={
+'articleone' :
 {
     title:'article one hi I am akshay' ,
     heading:'articleone' ,
@@ -13,8 +14,22 @@ var articleone=
     <p>ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..
                   ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda...</p>
                   `
+},
+'articletwo':{ title:'article two hi I am akshay' ,
+    heading:'articletwo' ,
+    date:'feb 10th 2017' ,
+    content: `  
+    <p>ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..
+                  ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda...</p>
+                  `},
+'articlethree':{ title:'article three hi I am akshay' ,
+    heading:'articlethree' ,
+    date:'feb 10th 2017' ,
+    content: `  
+    <p>ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..
+                  ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda..ab tere bin ab rah ni sakte tere bina kya wajud mera...tujhse juda agar ho jayenge to khud se hi ho jaenge juda...</p>
+                  `}
 };
-
 
 function createTemplate(data) 
 {
@@ -57,19 +72,15 @@ return htmltemplate;
 }
 
 
-app.get('/articleone', function (req, res) {
-   res.send(createTemplate(articleone));
-});
-app.get('/articletwo', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'articletwo.html'));
-});
-app.get('/articlethree', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'articlethree.html'));
-});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+app.get('/:articlename', function (req, res) {
+   res.send(createTemplate(articles(articlename)));
+});
+var articlename=req.params.articlename;
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
